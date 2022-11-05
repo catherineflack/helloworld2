@@ -28,7 +28,7 @@ logger.info('logging enabled')
 # https://www.pythontutorial.net/python-basics/python-read-text-file/#:~:text=To%20read%20a%20text%20file%20in%20Python%2C%20you%20follow%20these,the%20file%20close()%20method.
 
 try:
-    with open('/hw-git-copy/hwenvar.env', 'r') as hwfile:
+    with open('/helloworld/hw-git-copy/hwenvar.env', 'r') as hwfile:
         # read line
         hello_var = hwfile.readline()
         logger.info('reading file')
