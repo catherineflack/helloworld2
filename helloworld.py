@@ -27,21 +27,24 @@ logger.info('logging enabled')
 # REFERENCE:
 # https://www.pythontutorial.net/python-basics/python-read-text-file/#:~:text=To%20read%20a%20text%20file%20in%20Python%2C%20you%20follow%20these,the%20file%20close()%20method.
 
-try:
-    with open('/helloworld/hw-git-copy/hwenvar.env', 'r') as hwfile:
-        # read line
-        hello_var = hwfile.readline()
-        logger.info('reading file')
-        # split result into var name and value list
-        split = hello_var.rsplit("=")
-        logger.debug('splitting variables')
-        # print list items, stripping trailing spaces
-        for item in split:
-            print(item.strip())
-            # log printing of each item
-            logger.info('printing item: ' + item)
+run = 0
+while run < 6:
+    try:
+        with open('/helloworld/hw-git-copy/hwenvar.env', 'r') as hwfile:
+            # read line
+            hello_var = hwfile.readline()
+            logger.info('reading file')
+            # split result into var name and value list
+            split = hello_var.rsplit("=")
+            logger.debug('splitting variables')
+            # print list items, stripping trailing spaces
+            for item in split:
+                print(item.strip())
+                # log printing of each item
+                logger.info('printing item: ' + item)
 
-# 3) print and log error if expected file not found
-except:
-    print("Oops! No File found!")
-    logger.error('Missing Github File - check Ansible script')
+    # 3) print and log error if expected file not found
+    except:
+        print("Oops! No File found!")
+        logger.error('Missing Github File - check Ansible script')
+        run +=1
