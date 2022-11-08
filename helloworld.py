@@ -16,7 +16,7 @@ import time
 
 logger = logging.getLogger("app")
 logger.setLevel(logging.DEBUG)
-handler = logging.FileHandler('hw_output.json')
+handler = logging.FileHandler('/helloworld/hw_output.json')
 handler.setFormatter(ecs_logging.StdlibFormatter())
 logger.addHandler(handler)
 
