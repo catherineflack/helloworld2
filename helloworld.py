@@ -29,6 +29,7 @@ logger.info('logging enabled')
 
 run = 0
 while run < 6:
+    run +=1
     try:
         with open('/helloworld/hw-git-copy/hwenvar.env', 'r') as hwfile:
             # read line
@@ -47,4 +48,3 @@ while run < 6:
     except:
         print("Oops! No File found!")
         logger.error('Missing Github File - check Ansible script')
-run +=1
