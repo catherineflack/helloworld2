@@ -6,6 +6,7 @@
 # REFERENCES: 
 # https://docs.python.org/3/howto/logging.html
 # https://stackoverflow.com/questions/533048/how-to-log-source-file-name-and-line-number-in-python 
+python3 -m pip install ecs-logging
 
 from cgitb import handler
 import logging
