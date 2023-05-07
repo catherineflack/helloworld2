@@ -16,7 +16,7 @@ import time
 
 logger = logging.getLogger("app")
 logger.setLevel(logging.DEBUG)
-handler = logging.FileHandler('/helloworld/hw_output.json')
+handler = logging.FileHandler('/etc/helloworld/hw_output.json')
 handler.setFormatter(ecs_logging.StdlibFormatter())
 logger.addHandler(handler)
 
@@ -31,7 +31,7 @@ run = 0
 while run < 6:
     run +=1
     try:
-        with open('/helloworld/hw-git-copy/hwenvar.env', 'r') as hwfile:
+        with open('/etc/helloworld/hw-git-copy/hwenvar.env', 'r') as hwfile:
             # read line
             hello_var = hwfile.readline()
             logger.info('reading file')
